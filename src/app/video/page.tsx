@@ -9,7 +9,7 @@ import Vimeo from '@u-wave/react-vimeo';
 import { PlayCircle } from "lucide-react";
 
 const VIDEO_CONTENT = {
-    videoType: 'vimeo', // 'wistia' or 'vimeo'
+    videoType: 'wistia', // 'wistia' or 'vimeo'
     wistiaId: 'la8ej3t2vw',
     vimeoId: '1116184323',
     stepOne: {
