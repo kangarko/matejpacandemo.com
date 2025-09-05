@@ -42,7 +42,7 @@ export default function Footer({ hideNavigation = false }: FooterProps) {
                                         key={item.href}
                                         href={item.href}
                                         className={`relative font-tech uppercase tracking-wider transition-colors duration-300
-                                            ${item.brightHighlight ? 'text-acid-green hover:text-white' : item.highlight ? 'text-hot-pink hover:text-white' : 'text-chrome-silver/70 hover:text-white'}`}
+                                            ${item.highlight ? 'text-acid-green hover:text-white' : 'text-chrome-silver/70 hover:text-white'}`}
                                     >
                                         {item.label}
                                     </Link>

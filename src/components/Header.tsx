@@ -28,11 +28,9 @@ export default function Header({ hideNavigation = false }: HeaderProps) {
                                     key={item.href}
                                     href={item.href}
                                     className={`px-6 py-3 font-tech text-sm uppercase tracking-wider border transition-all duration-300
-                                        ${item.brightHighlight
+                                        ${item.highlight
                                             ? 'text-acid-green border-acid-green hover:bg-acid-green/20'
-                                            : item.highlight
-                                                ? 'text-hot-pink border-hot-pink hover:bg-hot-pink/20'
-                                                : 'text-chrome-silver border-chrome-silver/30 hover:border-neon-cyan hover:text-neon-cyan'}`}
+                                            : 'text-chrome-silver border-chrome-silver/30 hover:border-neon-cyan hover:text-neon-cyan'}`}
                                 >
                                     {item.label}
                                 </Link>
@@ -67,7 +65,7 @@ export default function Header({ hideNavigation = false }: HeaderProps) {
                                 href={item.href}
                                 onClick={() => setIsMenuOpen(false)}
                                 className={`block py-4 font-tech text-lg uppercase tracking-wider border-b border-chrome-silver/10
-                                    ${item.brightHighlight ? 'text-acid-green' : item.highlight ? 'text-hot-pink' : 'text-chrome-silver hover:text-neon-cyan'}`}
+                                    ${item.highlight ? 'text-acid-green' : 'text-chrome-silver hover:text-neon-cyan'}`}
                             >
                                 {item.label}
                             </Link>

@@ -10,7 +10,7 @@ export const siteConfig = {
         { label: 'About', href: '/about' },
         { label: 'Contact', href: '/contact' },
         { label: 'Blog', href: '/blog' },
-        { label: 'FREE Case Study', href: '/case-study', highlight: true, brightHighlight: true }
+        { label: 'FREE Case Study', href: '/case-study', highlight: true }
     ],
     footer: {
         copyright: '© 2025 Matej Pacan'
