@@ -4,7 +4,7 @@ import "./globals.css";
 import { siteConfig } from "@/config";
 
 export const metadata: Metadata = {
-    metadataBase: new URL(process.env.NEXT_PUBLIC_URL || 'http://localhost:3000'),
+    metadataBase: new URL(siteConfig.siteUrl),
     title: siteConfig.seo.defaultTitle,
     description: siteConfig.seo.defaultDescription,
     keywords: siteConfig.seo.keywords,

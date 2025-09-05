@@ -1,4 +1,5 @@
 export const siteConfig = {
+    siteUrl: 'https://matejpacandemo.com',
     brand: {
         name: 'Matej Pacan'
     },
