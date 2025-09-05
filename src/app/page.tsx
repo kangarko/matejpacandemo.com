@@ -8,7 +8,7 @@ import Header from "@/components/Header";
 
 const HOME_CONTENT = {
     hero: {
-        imageSrc: '/matej.webp',
+        imageSrc: '/hero.webp',
         headline: 'I help people start and grow profitable SaaS businesses',
         subheadlines: [
             'Software entrepreneur who went from teenage coder to CEO of MineAcademy.org, serving 1.2 million customers across 80+ countries.',

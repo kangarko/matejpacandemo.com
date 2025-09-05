@@ -8,7 +8,7 @@ import Header from "@/components/Header";
 const SUCCESS_CONTENT = {
     fullText: 'CALL BOOKED',
     title: 'Your Application Is Complete & Your Session Is Scheduled',
-    image: '/matej-avatar.png',
+    image: '/avatar.jpg',
     paragraphs: [
         'Thanks for scheduling your breakthrough strategy session.',
         'I have sent you confirmation of your call time and date via email, please make sure that you put this in your calendar right now.',

@@ -5,9 +5,13 @@ import Link from "next/link";
 import { WistiaPlayer } from "@wistia/wistia-player-react";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import Vimeo from '@u-wave/react-vimeo';
+import { PlayCircle } from "lucide-react";
 
 const VIDEO_CONTENT = {
-    wistiaMediaId: 'xloo1jccl2',
+    videoType: 'vimeo', // 'wistia' or 'vimeo'
+    wistiaId: 'la8ej3t2vw',
+    vimeoId: '1116184323',
     stepOne: {
         fullTitle: 'Step One: Watch This New Case Study Right Now',
     },
@@ -22,6 +26,7 @@ const VIDEO_CONTENT = {
 
 export default function VideoPage() {
     const [isLoaded, setIsLoaded] = useState(false);
+    const [vimeoPlaying, setVimeoPlaying] = useState(false);
 
     useEffect(() => {
         setIsLoaded(true);
@@ -47,12 +52,45 @@ export default function VideoPage() {
                     <div className="relative bg-deep-black border-2 border-chrome-silver/30 p-1">
                         <div className="relative" style={{ paddingBottom: '56.25%' }}>
                             <div className="absolute inset-0">
-                                <WistiaPlayer
-                                    mediaId={VIDEO_CONTENT.wistiaMediaId}
-                                    aspect={16 / 9}
-                                    playerColor="#1a1a1a"
-                                    volumeControl={true}
-                                />
+                                {VIDEO_CONTENT.videoType === 'wistia' ? (
+                                    <WistiaPlayer
+                                        mediaId={VIDEO_CONTENT.wistiaId}
+                                        aspect={16 / 9}
+                                        playerColor="#1a1a1a"
+                                        volumeControl={true}
+                                    />
+                                ) : (
+                                    <div className="relative w-full h-full">
+                                        {vimeoPlaying ? (
+                                            <Vimeo
+                                                key="vimeo-playing"
+                                                video={VIDEO_CONTENT.vimeoId}
+                                                responsive
+                                                autoplay
+                                                muted={false}
+                                                controls={true}
+                                            />
+                                        ) : (
+                                            <>
+                                                <Vimeo
+                                                    key="vimeo-preview"
+                                                    video={VIDEO_CONTENT.vimeoId}
+                                                    responsive
+                                                    autoplay
+                                                    loop
+                                                    muted
+                                                    background
+                                                />
+                                                <div
+                                                    className="absolute inset-0 flex items-center justify-center cursor-pointer bg-black/30 hover:bg-black/40 transition-colors duration-300"
+                                                    onClick={() => setVimeoPlaying(true)}
+                                                >
+                                                    <PlayCircle className="w-24 h-24 text-white/90 hover:text-white hover:scale-110 transition-all duration-300" />
+                                                </div>
+                                            </>
+                                        )}
+                                    </div>
+                                )}
                             </div>
                         </div>
                     </div>

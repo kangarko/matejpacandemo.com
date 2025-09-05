@@ -61,7 +61,7 @@ export default function PostLayout({ title, date, imageSrc, children }: PostLayo
             <aside className="mt-24 max-w-4xl mx-auto px-6">
                 <div className="p-8 bg-chrome-silver/5 backdrop-blur-sm rounded-2xl border border-chrome-silver/10 flex flex-col md:flex-row items-center gap-8">
                     <Image
-                        src="/matej-avatar.png"
+                        src="/avatar.jpg"
                         alt="Author Avatar"
                         width={150}
                         height={150}

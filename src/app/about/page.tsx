@@ -8,7 +8,7 @@ import Header from "@/components/Header";
 
 const ABOUT_CONTENT = {
     title: `About Matej Pacan`,
-    imageSrc: '/matej.webp',
+    imageSrc: '/hero.webp',
     paragraphs: [
         'Matej Pacan is a Slovak software entrepreneur who built one of the largest educational platforms in programming, teaching over 4,000 students while serving 1.2 million customers across his SaaS products.',
         'As CEO of MineAcademy.org and Co-Founder of VibeToExit.com, Matej transformed from a teenage coder to a successful entrepreneur, building software that generated revenue from 80+ countries and helping students land $100,000-$150,000 programming jobs.',
