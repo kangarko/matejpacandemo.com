@@ -9,7 +9,7 @@ import Header from "@/components/Header";
 
 const CONTACT_CONTENT = {
     title: 'Want to get in touch?',
-    imageSrc: '/matej.webp',
+    imageSrc: '/hero.webp',
     paragraphs: [
         'To contact Matej or his staff please use the following information.',
         'Matej Pacan and his staff operate Monday–Friday 9am–5pm Europe/Prague.'
