@@ -23,6 +23,6 @@ export const siteConfig = {
         ogImage: '/og-image.jpg'
     },
     analytics: {
-        googleTagManagerId: ''
+        googleTagManagerId: 'GTM-M7H8MWX7'
     }
 };
