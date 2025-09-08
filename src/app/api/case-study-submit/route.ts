@@ -26,6 +26,12 @@ export async function POST(request: NextRequest) {
         if (!webhookUrl)
             return NextResponse.json({ success: true });
 
+        // Extract first_name and last_name from name
+        const trimmedName = name.trim();
+        const nameParts = trimmedName.split(' ');
+        const first_name = nameParts[0];
+        const last_name = nameParts.slice(1).join(' ');
+
         // Forward to Make.com webhook
         const response = await fetch(webhookUrl, {
             method: 'POST',
@@ -33,7 +39,9 @@ export async function POST(request: NextRequest) {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                name: name.trim(),
+                name: trimmedName,
+                first_name,
+                last_name,
                 email: email.trim(),
                 timestamp: new Date().toISOString(),
                 source: 'case-study-form'
