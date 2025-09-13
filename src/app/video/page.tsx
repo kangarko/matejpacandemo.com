@@ -10,7 +10,7 @@ import { PlayCircle } from "lucide-react";
 
 const VIDEO_CONTENT = {
     videoType: 'wistia', // 'wistia' or 'vimeo'
-    wistiaId: 'la8ej3t2vw',
+    wistiaId: 'xloo1jccl2',
     vimeoId: '1116184323',
     stepOne: {
         fullTitle: 'Step One: Watch This New Case Study Right Now',
